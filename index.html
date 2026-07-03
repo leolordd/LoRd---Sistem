@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация в Системе</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; padding: 20px; display: flex; justify-content: center; }
+        .form-container { background: #161625; padding: 30px; border-radius: 10px; width: 100%; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        h2 { text-align: center; color: #4e73df; }
+        input, select, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; box-sizing: border-box; }
+        input, select { background: #222533; color: #fff; }
+        button { background: #4e73df; color: #fff; font-weight: bold; cursor: pointer; }
+        button:hover { background: #375a7f; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Подача анкеты</h2>
+        <form action="/submit" method="POST">
+            <label>Ваш игровой ник:</label>
+            <input type="text" name="nickname" placeholder="Ivan_Ivanov" required>
+
+            <label>Ссылка на ваш VK:</label>
+            <input type="url" name="vk_link" placeholder="https://vk.com/id1" required>
+
+            <label>Желаемая должность / Ранг:</label>
+            <select name="rank">
+                <option value="След. за Органами">Следящий за Органами</option>
+                <option value="Лидер">Лидер Фракции</option>
+                <option value="Заместитель">Заместитель</option>
+            </select>
+
+            <label>Ссылка на скриншот статистики (/stats):</label>
+            <input type="url" name="stats_link" placeholder="https://imgur.com/..." required>
+
+            <button type="submit">Отправить анкету</button>
+        </form>
+    </div>
+</body>
+</html>
