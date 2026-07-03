@@ -1,0 +1,6 @@
+vkbottle
+fastapi
+uvicorn
+jinja2
+aiofiles
+pydantic
